@@ -1,9 +1,15 @@
 # CalculatorApp
-Version 1.0.0
+Version 1.10.09
 - An educational tool for Takuma
+## Changelog
+### Version 1.10.09
+- App is functional, but very basic
+- Include files are fully commented/documented
+- Src files have yet to be commented/documented
+- Makefile and .gitignore have also not been commente/documented
 ## How to Run and Edit Code
 ### Git
-- Type in the terminal:
+Type in the terminal:
 ```
 git --version
 ```
@@ -11,10 +17,61 @@ It will then prompt you to install it if you havent already. Afterwards, navigat
 ```
 cd Repositories
 ```
-Then go to
+Then create a clone of this repository by typing:
+```
+git clone https://github.com/chopndolphy/CodingWithTakuma.git
+```
 ### Make
+First we need homebrew. This makes it easy to install certain coding related software.
+Type in the terminal to install the command line tools:
+```
+xcode-select --install
+```
+Click "install" and "agree". After, download the homebrew installation script by typing:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+Enter you password when prompted, press return, and then press return one last time and the installation should be successful.
+
+Now to install make simply type:
+```
+brew install make
+```
 ### Visual Studio Code
-### Terminal
+- First [install](https://code.visualstudio.com/Download) VS Code.
+- Then open the terminal and first navigate to the CalculatorApp repository:
+```
+cd Repositories/CodingWithTakuma
+```
+- Then open the app in Visual Studio Code by typing (this is how you will always open the project):
+```
+code .
+```
+(the period essentially means "here". So you are telling VS Code to open the project located in the folder that I am currently in)
+- Now because VS Code works with any coding language, we need to install specific extensions to get useful features for what we will be using. Go to the extensions tab on the left side, 5th icon down (looks like 4 squares(one of them is lonely :( ))
+- Search for and install the following:
+    - C/C++ by Microsoft
+    - C/C++ Extension Pack by Microsoft
+    - Git Extension Pack by Don Jayamanne
+    - Makefile Tools by Microsoft
+### Building, Running, and Editing the App from the Terminal
+Always first make sure you are located within the CodingWithTakuma folder. You can go there from the home directory by typing:
+```
+cd Repositories/CodingWithTakuma
+```
+Now to build the project type:
+```
+make
+```
+If the build was successful (good luck if it wasn't lol), then you can run the app with (when located within the CodingWithTakuma folder):
+```
+./bin/calculator_app
+```
+And again, if you want to open the project and edit with VS Code, (from the CodingWithTakuma folder) type:
+```
+code .
+```
+Feel free to mess around with the code. Make sure you save in VS Code and recompile in the terminal, before you run the project again (otherwise there won't be any changes).
 ## App Summary
 ### Purpose
 This calculator app is a basic example of how to structure an application. The app asks for two numbers and an operation symbol and outputs the result of the equation. This can be repeated indefinitely. The app is also structed to anticapte adding a graphical user interface.
